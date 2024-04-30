@@ -1,0 +1,26 @@
+import java.util.Scanner;
+public class Test {
+    public static void main(String[] args) {
+        double area;
+        Scanner sa=new Scanner(System.in);
+        Scanner sc=new Scanner(System.in);
+        Scanner sd=new Scanner(System.in);
+        Scanner sf=new Scanner(System.in);
+        while (true){
+        try {double shang= sa.nextDouble();
+            double xia=sc.nextDouble();
+            double height=sd.nextDouble();
+            double r=sf.nextDouble();
+            if(shang>0 & xia>0 &height>0 &r>0){
+                Lader lader = new Lader(shang,xia,height);
+                Circle circle = new Circle(r);
+                area = lader.getArea();
+                System.out.println("梯形的面积为："+area);
+                area = circle.getArea();
+                System.out.println("圆的面积为："+area);
+                break;}
+        }catch (NumberFormatException e){
+            System.out.println("程序有误!");
+        }
+    }
+}}
